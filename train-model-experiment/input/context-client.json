@@ -1,0 +1,4 @@
+{
+  "sources": [ "/tmp/dataset.nt" ],
+  "trainEndPoint": true
+}

@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/watdiv-rl/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica-rl/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "urn:jbr:train-model-experiment",
+  "@type": "ExperimentWatDiv",
+  "datasetScale": 1,
+  "queryCount": 5,
+  "queryRecurrence": 1,
+  "generateHdt": true,
+  "endpointUrl": "http://localhost:3001/sparql",
+  "queryRunnerReplication": 3,
+  "queryRunnerWarmupRounds": 1,
+  "queryRunnerRecordTimestamps": true,
+  "queryRunnerRecordHttpRequests": true,
+  "queryRunnerUrlParamsInit": {},
+  "queryRunnerUrlParamsRun": {},
+  "hookSparqlEndpoint": {
+    "@id": "urn:jbr:train-model-experiment:hookSparqlEndpoint",
+    "@type": "HookSparqlEndpointComunica",
+    "dockerfileClient": "input/dockerfiles/Dockerfile-client-train-rl",
+    "resourceConstraints": {
+      "@type": "StaticDockerResourceConstraints",
+      "cpu_percentage": 100
+    },
+    "configClient": "input/config-client.json",
+    "contextClient": "input/context-client.json",
+    "additionalBinds": ["/generated/dataset.nt:/tmp/dataset.nt", "/training-progress/current/:/tmp/trainingStateEngine/"],
+    "clientPort": 3001,
+    "clientLogLevel": "info",
+    "queryTimeout": 300,
+    "maxMemory": 8192
+  }
+}
