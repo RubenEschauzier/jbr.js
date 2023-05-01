@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/docker/DockerImagePuller.jsonld#IDockerImagePullerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IDockerImagePullerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/docker/DockerImagePuller.jsonld#IDockerImagePullerArgs__member_repoTag",
+          "memberFieldName": "repoTag"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

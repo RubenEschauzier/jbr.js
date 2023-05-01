@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IDockerContainerCreatorArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs__member_containerName",
+          "memberFieldName": "containerName"
+        },
+        {
+          "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs__member_imageName",
+          "memberFieldName": "imageName"
+        },
+        {
+          "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs__member_cmdArgs",
+          "memberFieldName": "cmdArgs"
+        },
+        {
+          "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs__member_resourceConstraints",
+          "memberFieldName": "resourceConstraints"
+        },
+        {
+          "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs__member_hostConfig",
+          "memberFieldName": "hostConfig"
+        },
+        {
+          "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs__member_logFilePath",
+          "memberFieldName": "logFilePath"
+        },
+        {
+          "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs__member_statsFilePath",
+          "memberFieldName": "statsFilePath"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

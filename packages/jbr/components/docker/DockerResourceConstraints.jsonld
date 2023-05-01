@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints",
+      "@type": "AbstractClass",
+      "requireElement": "DockerResourceConstraints",
+      "comment": "Allows constraints to be placed on Docker container resources.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints__member_toHostConfig",
+          "memberFieldName": "toHostConfig"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

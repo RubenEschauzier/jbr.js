@@ -1,0 +1,1 @@
+{"version":3,"file":"NpmInstaller.js","sourceRoot":"","sources":["NpmInstaller.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * Installs npm packages.\n */\nexport interface NpmInstaller {\n  install: (cwd: string, packages: string[], scopeError: string) => Promise<void>;\n}\n"]}

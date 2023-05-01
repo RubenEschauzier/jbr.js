@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/cli/ErrorHandled.jsonld#ErrorHandled",
+      "@type": "Class",
+      "requireElement": "ErrorHandled",
+      "comment": "An error that should be considered a non-programming error, which can be handled by simply printing the message on the CLI.",
+      "parameters": [
+        {
+          "@id": "j:components/cli/ErrorHandled.jsonld#ErrorHandled_message",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/cli/ErrorHandled.jsonld#ErrorHandled__member_handled",
+          "memberFieldName": "handled"
+        },
+        {
+          "@id": "j:components/cli/ErrorHandled.jsonld#ErrorHandled__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/cli/ErrorHandled.jsonld#ErrorHandled_message"
+        }
+      ]
+    }
+  ]
+}

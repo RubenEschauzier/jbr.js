@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica-rl/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-hook/sparql-endpoint-comunica-rl",
+  "components": [
+    {
+      "@id": "jhsecr:components/HookHandlerSparqlEndpointComunica.jsonld#HookHandlerSparqlEndpointComunica",
+      "@type": "Class",
+      "requireElement": "HookHandlerSparqlEndpointComunica",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "j:components/hook/HookHandler.jsonld#HookHandler",
+          "genericTypeInstances": [
+            "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica"
+          ]
+        }
+      ],
+      "comment": "Hook handler for a Comunica-based SPARQL endpoint.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "jhsecr:components/HookHandlerSparqlEndpointComunica.jsonld#HookHandlerSparqlEndpointComunica__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "jhsecr:components/HookHandlerSparqlEndpointComunica.jsonld#HookHandlerSparqlEndpointComunica__member_getDefaultParams",
+          "memberFieldName": "getDefaultParams"
+        },
+        {
+          "@id": "jhsecr:components/HookHandlerSparqlEndpointComunica.jsonld#HookHandlerSparqlEndpointComunica__member_getSubHookNames",
+          "memberFieldName": "getSubHookNames"
+        },
+        {
+          "@id": "jhsecr:components/HookHandlerSparqlEndpointComunica.jsonld#HookHandlerSparqlEndpointComunica__member_init",
+          "memberFieldName": "init"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

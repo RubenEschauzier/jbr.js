@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-experiment/solidbench",
+  "@type": "Module",
+  "requireName": "@jbr-experiment/solidbench",
+  "import": [
+    "jes:components/ExperimentHandlerSolidBench.jsonld",
+    "jes:components/ExperimentSolidBench.jsonld"
+  ]
+}

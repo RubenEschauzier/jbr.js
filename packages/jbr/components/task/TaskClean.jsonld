@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/TaskClean.jsonld#TaskClean",
+      "@type": "Class",
+      "requireElement": "TaskClean",
+      "comment": "Cleans an experiment.",
+      "parameters": [
+        {
+          "@id": "j:components/task/TaskClean.jsonld#TaskClean_context",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskClean.jsonld#TaskClean_cleanTargets_docker",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskClean.jsonld#TaskClean__member_context",
+          "memberFieldName": "context"
+        },
+        {
+          "@id": "j:components/task/TaskClean.jsonld#TaskClean__member_cleanTargets",
+          "memberFieldName": "cleanTargets"
+        },
+        {
+          "@id": "j:components/task/TaskClean.jsonld#TaskClean__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/task/TaskClean.jsonld#TaskClean__member_clean",
+          "memberFieldName": "clean"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/task/TaskClean.jsonld#TaskClean_context"
+        },
+        {
+          "@id": "j:components/task/TaskClean.jsonld#TaskClean_cleanTargets__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "docker",
+              "value": {
+                "@id": "j:components/task/TaskClean.jsonld#TaskClean_cleanTargets_docker"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

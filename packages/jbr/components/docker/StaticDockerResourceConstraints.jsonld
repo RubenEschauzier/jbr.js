@@ -1,0 +1,126 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints",
+      "@type": "Class",
+      "requireElement": "StaticDockerResourceConstraints",
+      "extends": [
+        "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints"
+      ],
+      "comment": "Allows constraints to be placed on Docker container resources.",
+      "parameters": [
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints_cpu_percentage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Percentage (0-100) of the total CPU power that can be used. E.g. when fully consuming 4 cores, this value must be set to 100."
+        },
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints_memory_limit",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Memory usage limit, e.g. '10m', '1g'."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints__member_QUANTITY_UNITS",
+          "memberFieldName": "QUANTITY_UNITS",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints__member_cpu",
+          "memberFieldName": "cpu",
+          "range": "j:components/docker/StaticDockerResourceConstraints.jsonld#IDockerCpuConstraints"
+        },
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints__member_memory",
+          "memberFieldName": "memory",
+          "range": "j:components/docker/StaticDockerResourceConstraints.jsonld#IDockerMemoryConstraints"
+        },
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints__member_quantityStringToBytes",
+          "memberFieldName": "quantityStringToBytes"
+        },
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints__member_toHostConfig",
+          "memberFieldName": "toHostConfig"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints_cpu__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "percentage",
+              "value": {
+                "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints_cpu_percentage"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints_memory__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "limit",
+              "value": {
+                "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints_memory_limit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#IDockerCpuConstraints",
+      "@type": "AbstractClass",
+      "requireElement": "IDockerCpuConstraints",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#IDockerCpuConstraints__member_percentage",
+          "memberFieldName": "percentage"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#IDockerMemoryConstraints",
+      "@type": "AbstractClass",
+      "requireElement": "IDockerMemoryConstraints",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#IDockerMemoryConstraints__member_limit",
+          "memberFieldName": "limit"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

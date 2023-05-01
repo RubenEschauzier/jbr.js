@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/docker/DockerImageBuilder.jsonld#IDockerImageBuilderArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IDockerImageBuilderArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/docker/DockerImageBuilder.jsonld#IDockerImageBuilderArgs__member_cwd",
+          "memberFieldName": "cwd"
+        },
+        {
+          "@id": "j:components/docker/DockerImageBuilder.jsonld#IDockerImageBuilderArgs__member_dockerFile",
+          "memberFieldName": "dockerFile"
+        },
+        {
+          "@id": "j:components/docker/DockerImageBuilder.jsonld#IDockerImageBuilderArgs__member_auxiliaryFiles",
+          "memberFieldName": "auxiliaryFiles"
+        },
+        {
+          "@id": "j:components/docker/DockerImageBuilder.jsonld#IDockerImageBuilderArgs__member_imageName",
+          "memberFieldName": "imageName"
+        },
+        {
+          "@id": "j:components/docker/DockerImageBuilder.jsonld#IDockerImageBuilderArgs__member_buildArgs",
+          "memberFieldName": "buildArgs"
+        },
+        {
+          "@id": "j:components/docker/DockerImageBuilder.jsonld#IDockerImageBuilderArgs__member_logger",
+          "memberFieldName": "logger"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

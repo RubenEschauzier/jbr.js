@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/ITaskContext.jsonld#IExperimentPaths",
+      "@type": "AbstractClass",
+      "requireElement": "IExperimentPaths",
+      "comment": "Relevant paths for an experiment.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/task/ITaskContext.jsonld#IExperimentPaths__member_root",
+          "memberFieldName": "root"
+        },
+        {
+          "@id": "j:components/task/ITaskContext.jsonld#IExperimentPaths__member_input",
+          "memberFieldName": "input"
+        },
+        {
+          "@id": "j:components/task/ITaskContext.jsonld#IExperimentPaths__member_generated",
+          "memberFieldName": "generated"
+        },
+        {
+          "@id": "j:components/task/ITaskContext.jsonld#IExperimentPaths__member_output",
+          "memberFieldName": "output"
+        },
+        {
+          "@id": "j:components/task/ITaskContext.jsonld#IExperimentPaths__member_combination",
+          "memberFieldName": "combination"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

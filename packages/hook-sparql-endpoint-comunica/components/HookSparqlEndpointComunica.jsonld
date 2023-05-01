@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-hook/sparql-endpoint-comunica",
+  "components": [
+    {
+      "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica",
+      "@type": "Class",
+      "requireElement": "HookSparqlEndpointComunica",
+      "extends": [
+        "j:components/hook/Hook.jsonld#Hook"
+      ],
+      "comment": "A hook instance for a Comunica-based SPARQL endpoint.",
+      "parameters": [
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_dockerfileClient",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_configClient",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_contextClient",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_clientPort",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_clientLogLevel",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_queryTimeout",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_maxMemory",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_resourceConstraints",
+          "range": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_dockerfileClient",
+          "memberFieldName": "dockerfileClient",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_resourceConstraints",
+          "memberFieldName": "resourceConstraints",
+          "range": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_configClient",
+          "memberFieldName": "configClient",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_contextClient",
+          "memberFieldName": "contextClient",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_clientPort",
+          "memberFieldName": "clientPort",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_clientLogLevel",
+          "memberFieldName": "clientLogLevel",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_queryTimeout",
+          "memberFieldName": "queryTimeout",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_maxMemory",
+          "memberFieldName": "maxMemory",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_getDockerImageName",
+          "memberFieldName": "getDockerImageName"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_prepare",
+          "memberFieldName": "prepare"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_start",
+          "memberFieldName": "start"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica__member_clean",
+          "memberFieldName": "clean"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_dockerfileClient"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_resourceConstraints"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_configClient"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_contextClient"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_clientPort"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_clientLogLevel"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_queryTimeout"
+        },
+        {
+          "@id": "jhsec:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_maxMemory"
+        }
+      ]
+    }
+  ]
+}

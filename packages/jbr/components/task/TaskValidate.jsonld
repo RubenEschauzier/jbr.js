@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/TaskValidate.jsonld#TaskValidate",
+      "@type": "Class",
+      "requireElement": "TaskValidate",
+      "comment": "Validates an experiment.",
+      "parameters": [
+        {
+          "@id": "j:components/task/TaskValidate.jsonld#TaskValidate_context",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskValidate.jsonld#TaskValidate__member_REQUIRED_FILES",
+          "memberFieldName": "REQUIRED_FILES",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskValidate.jsonld#TaskValidate__member_REQUIRED_FILES_COMBINATIONS",
+          "memberFieldName": "REQUIRED_FILES_COMBINATIONS",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskValidate.jsonld#TaskValidate__member_context",
+          "memberFieldName": "context"
+        },
+        {
+          "@id": "j:components/task/TaskValidate.jsonld#TaskValidate__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/task/TaskValidate.jsonld#TaskValidate__member_validate",
+          "memberFieldName": "validate"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/task/TaskValidate.jsonld#TaskValidate_context"
+        }
+      ]
+    }
+  ]
+}

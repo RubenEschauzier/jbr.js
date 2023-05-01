@@ -1,0 +1,98 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook",
+      "@type": "Class",
+      "requireElement": "TaskSetHook",
+      "comment": "Sets a handler for a given experiment's hook",
+      "parameters": [
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_context",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_handlerTypeId",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_hookPathName",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_npmInstaller",
+          "range": "j:components/npm/NpmInstaller.jsonld#NpmInstaller"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook__member_context",
+          "memberFieldName": "context"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook__member_hookPathName",
+          "memberFieldName": "hookPathName"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook__member_handlerTypeId",
+          "memberFieldName": "handlerTypeId"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook__member_npmInstaller",
+          "memberFieldName": "npmInstaller"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook__member_getObjectPath",
+          "memberFieldName": "getObjectPath"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook__member_setObjectPath",
+          "memberFieldName": "setObjectPath"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_context"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_hookPathName"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_handlerTypeId"
+        },
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_npmInstaller"
+        }
+      ]
+    },
+    {
+      "@id": "j:components/task/TaskSetHook.jsonld#ITaskSetHookOutput",
+      "@type": "AbstractClass",
+      "requireElement": "ITaskSetHookOutput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskSetHook.jsonld#ITaskSetHookOutput__member_subHookNames",
+          "memberFieldName": "subHookNames"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

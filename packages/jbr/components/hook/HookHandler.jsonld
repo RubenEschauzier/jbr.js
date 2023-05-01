@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/hook/HookHandler.jsonld#HookHandler",
+      "@type": "AbstractClass",
+      "requireElement": "HookHandler",
+      "comment": "Handler for a certain type of experiment hook.",
+      "genericTypeParameters": [
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler__generic_H",
+          "range": "j:components/hook/Hook.jsonld#Hook"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler_id",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler_hookClassName",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler__member_id",
+          "memberFieldName": "id",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler__member_hookClassName",
+          "memberFieldName": "hookClassName",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler__member_getDefaultParams",
+          "memberFieldName": "getDefaultParams"
+        },
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler__member_getSubHookNames",
+          "memberFieldName": "getSubHookNames"
+        },
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler__member_init",
+          "memberFieldName": "init"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler_id"
+        },
+        {
+          "@id": "j:components/hook/HookHandler.jsonld#HookHandler_hookClassName"
+        }
+      ]
+    }
+  ]
+}

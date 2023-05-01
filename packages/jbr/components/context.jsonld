@@ -1,0 +1,319 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^5.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "j": "npmd:jbr/^2.0.0/",
+      "ErrorHandled": {
+        "@id": "j:components/cli/ErrorHandled.jsonld#ErrorHandled",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "j:components/cli/ErrorHandled.jsonld#ErrorHandled_message"
+          }
+        }
+      },
+      "IDockerContainerCreatorArgs": {
+        "@id": "j:components/docker/DockerContainerCreator.jsonld#IDockerContainerCreatorArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IDockerImageBuilderArgs": {
+        "@id": "j:components/docker/DockerImageBuilder.jsonld#IDockerImageBuilderArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IDockerImagePullerArgs": {
+        "@id": "j:components/docker/DockerImagePuller.jsonld#IDockerImagePullerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "DockerResourceConstraints": {
+        "@id": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints",
+        "@prefix": true,
+        "@context": {}
+      },
+      "StaticDockerResourceConstraints": {
+        "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints",
+        "@prefix": true,
+        "@context": {
+          "cpu_percentage": {
+            "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints_cpu_percentage"
+          },
+          "memory_limit": {
+            "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#StaticDockerResourceConstraints_memory_limit"
+          }
+        }
+      },
+      "IDockerCpuConstraints": {
+        "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#IDockerCpuConstraints",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IDockerMemoryConstraints": {
+        "@id": "j:components/docker/StaticDockerResourceConstraints.jsonld#IDockerMemoryConstraints",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ExperimentHandler": {
+        "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler",
+        "@prefix": true,
+        "@context": {
+          "id": {
+            "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler_id"
+          },
+          "experimentClassName": {
+            "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler_experimentClassName"
+          }
+        }
+      },
+      "Experiment": {
+        "@id": "j:components/experiment/Experiment.jsonld#Experiment",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ProcessHandler": {
+        "@id": "j:components/experiment/ProcessHandler.jsonld#ProcessHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ProcessHandlerComposite": {
+        "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite",
+        "@prefix": true,
+        "@context": {
+          "processHandlers": {
+            "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite_processHandlers",
+            "@container": "@list"
+          }
+        }
+      },
+      "CombinationProvider": {
+        "@id": "j:components/factor/CombinationProvider.jsonld#CombinationProvider",
+        "@prefix": true,
+        "@context": {}
+      },
+      "FractionalCombinationProvider": {
+        "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider",
+        "@prefix": true,
+        "@context": {
+          "combinations": {
+            "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider_combinations",
+            "@container": "@list"
+          },
+          "commonGenerated": {
+            "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider_commonGenerated"
+          }
+        }
+      },
+      "FullFactorialCombinationProvider": {
+        "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider",
+        "@prefix": true,
+        "@context": {
+          "factors": {
+            "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider_factors",
+            "@type": "@json"
+          },
+          "commonGenerated": {
+            "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider_commonGenerated"
+          }
+        }
+      },
+      "HookNonConfigured": {
+        "@id": "j:components/hook/HookNonConfigured.jsonld#HookNonConfigured",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Hook": {
+        "@id": "j:components/hook/Hook.jsonld#Hook",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IHookStartOptions": {
+        "@id": "j:components/hook/Hook.jsonld#IHookStartOptions",
+        "@prefix": true,
+        "@context": {}
+      },
+      "HookHandler": {
+        "@id": "j:components/hook/HookHandler.jsonld#HookHandler",
+        "@prefix": true,
+        "@context": {
+          "id": {
+            "@id": "j:components/hook/HookHandler.jsonld#HookHandler_id"
+          },
+          "hookClassName": {
+            "@id": "j:components/hook/HookHandler.jsonld#HookHandler_hookClassName"
+          }
+        }
+      },
+      "CliNpmInstaller": {
+        "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller_context"
+          },
+          "nextVersion": {
+            "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller_nextVersion"
+          }
+        }
+      },
+      "NpmInstaller": {
+        "@id": "j:components/npm/NpmInstaller.jsonld#NpmInstaller",
+        "@prefix": true,
+        "@context": {}
+      },
+      "VoidNpmInstaller": {
+        "@id": "j:components/npm/VoidNpmInstaller.jsonld#VoidNpmInstaller",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ICleanTargets": {
+        "@id": "j:components/task/ICleanTargets.jsonld#ICleanTargets",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IExperimentPaths": {
+        "@id": "j:components/task/ITaskContext.jsonld#IExperimentPaths",
+        "@prefix": true,
+        "@context": {}
+      },
+      "TaskClean": {
+        "@id": "j:components/task/TaskClean.jsonld#TaskClean",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/task/TaskClean.jsonld#TaskClean_context"
+          },
+          "cleanTargets_docker": {
+            "@id": "j:components/task/TaskClean.jsonld#TaskClean_cleanTargets_docker"
+          }
+        }
+      },
+      "TaskGenerateCombinations": {
+        "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations_context"
+          }
+        }
+      },
+      "TaskInitialize": {
+        "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_context"
+          },
+          "experimentTypeId": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_experimentTypeId"
+          },
+          "experimentName": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_experimentName"
+          },
+          "targetDirectory": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_targetDirectory"
+          },
+          "forceReInit": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_forceReInit"
+          },
+          "combinations": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_combinations"
+          },
+          "npmInstaller": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_npmInstaller"
+          },
+          "eId": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_experimentTypeId"
+          },
+          "e": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_experimentName"
+          },
+          "ry": {
+            "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_targetDirectory"
+          }
+        }
+      },
+      "ITaskInitializeOutput": {
+        "@id": "j:components/task/TaskInitialize.jsonld#ITaskInitializeOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "TaskPack": {
+        "@id": "j:components/task/TaskPack.jsonld#TaskPack",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/task/TaskPack.jsonld#TaskPack_context"
+          },
+          "outputName": {
+            "@id": "j:components/task/TaskPack.jsonld#TaskPack_outputName"
+          }
+        }
+      },
+      "TaskPrepare": {
+        "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_context"
+          },
+          "forceOverwriteGenerated": {
+            "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_forceOverwriteGenerated"
+          },
+          "combination": {
+            "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_combination"
+          },
+          "teGenerated": {
+            "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_forceOverwriteGenerated"
+          }
+        }
+      },
+      "TaskRun": {
+        "@id": "j:components/task/TaskRun.jsonld#TaskRun",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/task/TaskRun.jsonld#TaskRun_context"
+          },
+          "combination": {
+            "@id": "j:components/task/TaskRun.jsonld#TaskRun_combination"
+          }
+        }
+      },
+      "TaskSetHook": {
+        "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_context"
+          },
+          "handlerTypeId": {
+            "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_handlerTypeId"
+          },
+          "hookPathName": {
+            "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_hookPathName",
+            "@container": "@list"
+          },
+          "npmInstaller": {
+            "@id": "j:components/task/TaskSetHook.jsonld#TaskSetHook_npmInstaller"
+          }
+        }
+      },
+      "ITaskSetHookOutput": {
+        "@id": "j:components/task/TaskSetHook.jsonld#ITaskSetHookOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "TaskValidate": {
+        "@id": "j:components/task/TaskValidate.jsonld#TaskValidate",
+        "@prefix": true,
+        "@context": {
+          "context": {
+            "@id": "j:components/task/TaskValidate.jsonld#TaskValidate_context"
+          }
+        }
+      }
+    }
+  ]
+}

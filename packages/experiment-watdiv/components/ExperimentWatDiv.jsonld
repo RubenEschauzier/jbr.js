@@ -1,0 +1,224 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/watdiv/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-experiment/watdiv",
+  "components": [
+    {
+      "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv",
+      "@type": "Class",
+      "requireElement": "ExperimentWatDiv",
+      "extends": [
+        "j:components/experiment/Experiment.jsonld#Experiment"
+      ],
+      "comment": "An experiment instance for the LDBC SNB Decentralized benchmark.",
+      "parameters": [
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_datasetScale",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryCount",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRecurrence",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_generateHdt",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_endpointUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerReplication",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerWarmupRounds",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerRecordTimestamps",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerRecordHttpRequests",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerUrlParamsInit",
+          "range": "rdf:JSON"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerUrlParamsRun",
+          "range": "rdf:JSON"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_hookSparqlEndpoint",
+          "range": "j:components/hook/Hook.jsonld#Hook"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryTimeoutFallback",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_DOCKER_IMAGE_WATDIV",
+          "memberFieldName": "DOCKER_IMAGE_WATDIV"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_DOCKER_IMAGE_HDT",
+          "memberFieldName": "DOCKER_IMAGE_HDT"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_datasetScale",
+          "memberFieldName": "datasetScale",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryCount",
+          "memberFieldName": "queryCount",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryRecurrence",
+          "memberFieldName": "queryRecurrence",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_generateHdt",
+          "memberFieldName": "generateHdt",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_hookSparqlEndpoint",
+          "memberFieldName": "hookSparqlEndpoint",
+          "range": "j:components/hook/Hook.jsonld#Hook"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_endpointUrl",
+          "memberFieldName": "endpointUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryRunnerReplication",
+          "memberFieldName": "queryRunnerReplication",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryRunnerWarmupRounds",
+          "memberFieldName": "queryRunnerWarmupRounds",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryRunnerRecordTimestamps",
+          "memberFieldName": "queryRunnerRecordTimestamps",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryRunnerRecordHttpRequests",
+          "memberFieldName": "queryRunnerRecordHttpRequests",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryRunnerUrlParamsInit",
+          "memberFieldName": "queryRunnerUrlParamsInit",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryRunnerUrlParamsRun",
+          "memberFieldName": "queryRunnerUrlParamsRun",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_queryTimeoutFallback",
+          "memberFieldName": "queryTimeoutFallback",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_prepare",
+          "memberFieldName": "prepare"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv__member_clean",
+          "memberFieldName": "clean"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_datasetScale"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryCount"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRecurrence"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_generateHdt"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_hookSparqlEndpoint"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_endpointUrl"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerReplication"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerWarmupRounds"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerRecordTimestamps"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerRecordHttpRequests"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerUrlParamsInit"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerUrlParamsRun"
+        },
+        {
+          "@id": "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryTimeoutFallback"
+        }
+      ]
+    }
+  ]
+}

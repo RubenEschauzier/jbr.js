@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/watdiv/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-experiment/watdiv",
+  "components": [
+    {
+      "@id": "jew:components/ExperimentHandlerWatDiv.jsonld#ExperimentHandlerWatDiv",
+      "@type": "Class",
+      "requireElement": "ExperimentHandlerWatDiv",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler",
+          "genericTypeInstances": [
+            "jew:components/ExperimentWatDiv.jsonld#ExperimentWatDiv"
+          ]
+        }
+      ],
+      "comment": "An experiment handler for the LDBC SNB Decentralized benchmark.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "jew:components/ExperimentHandlerWatDiv.jsonld#ExperimentHandlerWatDiv__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "jew:components/ExperimentHandlerWatDiv.jsonld#ExperimentHandlerWatDiv__member_getDefaultParams",
+          "memberFieldName": "getDefaultParams"
+        },
+        {
+          "@id": "jew:components/ExperimentHandlerWatDiv.jsonld#ExperimentHandlerWatDiv__member_getHookNames",
+          "memberFieldName": "getHookNames"
+        },
+        {
+          "@id": "jew:components/ExperimentHandlerWatDiv.jsonld#ExperimentHandlerWatDiv__member_init",
+          "memberFieldName": "init"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

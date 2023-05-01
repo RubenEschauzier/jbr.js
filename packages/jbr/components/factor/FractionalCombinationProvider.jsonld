@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider",
+      "@type": "Class",
+      "requireElement": "FractionalCombinationProvider",
+      "extends": [
+        "j:components/factor/CombinationProvider.jsonld#CombinationProvider"
+      ],
+      "comment": "A direct provision of an array of factor combination.",
+      "parameters": [
+        {
+          "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider_combinations",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "rdf:JSON"
+          },
+          "comment": "An array of hashes containing factors mapped to values."
+        },
+        {
+          "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider_commonGenerated",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "If the prepare phase is identical across combinations."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider__member_combinations",
+          "memberFieldName": "combinations"
+        },
+        {
+          "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider__member_commonGenerated",
+          "memberFieldName": "commonGenerated",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider__member_getFactorCombinations",
+          "memberFieldName": "getFactorCombinations"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider_combinations"
+        },
+        {
+          "@id": "j:components/factor/FractionalCombinationProvider.jsonld#FractionalCombinationProvider_commonGenerated"
+        }
+      ]
+    }
+  ]
+}

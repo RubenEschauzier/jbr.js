@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-hook/sparql-endpoint-comunica",
+  "@type": "Module",
+  "requireName": "@jbr-hook/sparql-endpoint-comunica",
+  "import": [
+    "jhsec:components/HookHandlerSparqlEndpointComunica.jsonld",
+    "jhsec:components/HookSparqlEndpointComunica.jsonld"
+  ]
+}

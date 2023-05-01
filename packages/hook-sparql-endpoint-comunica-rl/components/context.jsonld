@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^5.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "jhsecr": "npmd:@jbr-hook/sparql-endpoint-comunica-rl/^2.0.0/",
+      "HookHandlerSparqlEndpointComunica": {
+        "@id": "jhsecr:components/HookHandlerSparqlEndpointComunica.jsonld#HookHandlerSparqlEndpointComunica",
+        "@prefix": true,
+        "@context": {}
+      },
+      "HookSparqlEndpointComunica": {
+        "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica",
+        "@prefix": true,
+        "@context": {
+          "dockerfileClient": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_dockerfileClient"
+          },
+          "configClient": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_configClient"
+          },
+          "contextClient": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_contextClient"
+          },
+          "clientPort": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_clientPort"
+          },
+          "clientLogLevel": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_clientLogLevel"
+          },
+          "queryTimeout": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_queryTimeout"
+          },
+          "maxMemory": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_maxMemory"
+          },
+          "additionalBinds": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_additionalBinds",
+            "@container": "@list"
+          },
+          "resourceConstraints": {
+            "@id": "jhsecr:components/HookSparqlEndpointComunica.jsonld#HookSparqlEndpointComunica_resourceConstraints"
+          }
+        }
+      }
+    }
+  ]
+}

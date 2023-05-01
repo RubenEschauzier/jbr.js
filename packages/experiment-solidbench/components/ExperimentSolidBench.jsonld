@@ -1,0 +1,360 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-experiment/solidbench",
+  "components": [
+    {
+      "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench",
+      "@type": "Class",
+      "requireElement": "ExperimentSolidBench",
+      "extends": [
+        "j:components/experiment/Experiment.jsonld#Experiment"
+      ],
+      "comment": "An experiment instance for the SolidBench social network benchmark.",
+      "parameters": [
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_scale",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configGenerateAux",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configFragment",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configFragmentAux",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configQueries",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configServer",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_validationParamsUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configValidation",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_hadoopMemory",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_dockerfileServer",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_serverPort",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_serverLogLevel",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_serverBaseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_endpointUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerReplication",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerWarmupRounds",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerRecordTimestamps",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerRecordHttpRequests",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerUpQuery",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerUrlParamsInit",
+          "range": "rdf:JSON"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerUrlParamsRun",
+          "range": "rdf:JSON"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_hookSparqlEndpoint",
+          "range": "j:components/hook/Hook.jsonld#Hook"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_serverResourceConstraints",
+          "range": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryTimeoutFallback",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_scale",
+          "memberFieldName": "scale",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_configGenerateAux",
+          "memberFieldName": "configGenerateAux",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_configFragment",
+          "memberFieldName": "configFragment",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_configFragmentAux",
+          "memberFieldName": "configFragmentAux",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_configQueries",
+          "memberFieldName": "configQueries",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_configServer",
+          "memberFieldName": "configServer",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_validationParamsUrl",
+          "memberFieldName": "validationParamsUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_configValidation",
+          "memberFieldName": "configValidation",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_hadoopMemory",
+          "memberFieldName": "hadoopMemory",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_dockerfileServer",
+          "memberFieldName": "dockerfileServer",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_hookSparqlEndpoint",
+          "memberFieldName": "hookSparqlEndpoint",
+          "range": "j:components/hook/Hook.jsonld#Hook"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_serverPort",
+          "memberFieldName": "serverPort",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_serverLogLevel",
+          "memberFieldName": "serverLogLevel",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_serverBaseUrl",
+          "memberFieldName": "serverBaseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_serverResourceConstraints",
+          "memberFieldName": "serverResourceConstraints",
+          "range": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_endpointUrl",
+          "memberFieldName": "endpointUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_queryRunnerReplication",
+          "memberFieldName": "queryRunnerReplication",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_queryRunnerWarmupRounds",
+          "memberFieldName": "queryRunnerWarmupRounds",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_queryRunnerRecordTimestamps",
+          "memberFieldName": "queryRunnerRecordTimestamps",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_queryRunnerRecordHttpRequests",
+          "memberFieldName": "queryRunnerRecordHttpRequests",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_queryRunnerUpQuery",
+          "memberFieldName": "queryRunnerUpQuery",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_queryRunnerUrlParamsInit",
+          "memberFieldName": "queryRunnerUrlParamsInit",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_queryRunnerUrlParamsRun",
+          "memberFieldName": "queryRunnerUrlParamsRun",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_queryTimeoutFallback",
+          "memberFieldName": "queryTimeoutFallback",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_getDockerImageName",
+          "memberFieldName": "getDockerImageName"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_replaceBaseUrlInDir",
+          "memberFieldName": "replaceBaseUrlInDir"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_prepare",
+          "memberFieldName": "prepare"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_startServer",
+          "memberFieldName": "startServer"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench__member_clean",
+          "memberFieldName": "clean"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_scale"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configGenerateAux"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configFragment"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configFragmentAux"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configQueries"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configServer"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_validationParamsUrl"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_configValidation"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_hadoopMemory"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_dockerfileServer"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_hookSparqlEndpoint"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_serverPort"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_serverLogLevel"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_serverBaseUrl"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_serverResourceConstraints"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_endpointUrl"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerReplication"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerWarmupRounds"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerRecordTimestamps"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerRecordHttpRequests"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerUpQuery"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerUrlParamsInit"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryRunnerUrlParamsRun"
+        },
+        {
+          "@id": "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench_queryTimeoutFallback"
+        }
+      ]
+    }
+  ]
+}

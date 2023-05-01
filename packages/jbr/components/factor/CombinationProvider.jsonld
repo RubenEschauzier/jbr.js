@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/factor/CombinationProvider.jsonld#CombinationProvider",
+      "@type": "AbstractClass",
+      "requireElement": "CombinationProvider",
+      "comment": "Provides factor combinations.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/factor/CombinationProvider.jsonld#CombinationProvider__member_commonGenerated",
+          "memberFieldName": "commonGenerated"
+        },
+        {
+          "@id": "j:components/factor/CombinationProvider.jsonld#CombinationProvider__member_getFactorCombinations",
+          "memberFieldName": "getFactorCombinations"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

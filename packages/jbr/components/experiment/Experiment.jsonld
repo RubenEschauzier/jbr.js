@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/experiment/Experiment.jsonld#Experiment",
+      "@type": "AbstractClass",
+      "requireElement": "Experiment",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/experiment/Experiment.jsonld#Experiment__member_prepare",
+          "memberFieldName": "prepare"
+        },
+        {
+          "@id": "j:components/experiment/Experiment.jsonld#Experiment__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "j:components/experiment/Experiment.jsonld#Experiment__member_clean",
+          "memberFieldName": "clean"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

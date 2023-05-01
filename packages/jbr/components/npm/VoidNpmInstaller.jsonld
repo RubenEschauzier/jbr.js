@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/npm/VoidNpmInstaller.jsonld#VoidNpmInstaller",
+      "@type": "Class",
+      "requireElement": "VoidNpmInstaller",
+      "extends": [
+        "j:components/npm/NpmInstaller.jsonld#NpmInstaller"
+      ],
+      "comment": "A dummy npm installer that does not install anything.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/npm/VoidNpmInstaller.jsonld#VoidNpmInstaller__member_install",
+          "memberFieldName": "install"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

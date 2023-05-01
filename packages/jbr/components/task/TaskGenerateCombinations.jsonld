@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations",
+      "@type": "Class",
+      "requireElement": "TaskGenerateCombinations",
+      "comment": "Generates combinations based on an experiment template and a combination provider.",
+      "parameters": [
+        {
+          "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations_context",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations__member_context",
+          "memberFieldName": "context"
+        },
+        {
+          "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations__member_generate",
+          "memberFieldName": "generate"
+        },
+        {
+          "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations__member_applyFactorCombination",
+          "memberFieldName": "applyFactorCombination"
+        },
+        {
+          "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations__member_copyFiles",
+          "memberFieldName": "copyFiles"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/task/TaskGenerateCombinations.jsonld#TaskGenerateCombinations_context"
+        }
+      ]
+    }
+  ]
+}

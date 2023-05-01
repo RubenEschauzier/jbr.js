@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-ldf/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-hook/sparql-endpoint-ldf",
+  "@type": "Module",
+  "requireName": "@jbr-hook/sparql-endpoint-ldf",
+  "import": [
+    "jhsel:components/HookHandlerSparqlEndpointLdf.jsonld",
+    "jhsel:components/HookSparqlEndpointLdf.jsonld"
+  ]
+}

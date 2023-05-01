@@ -1,0 +1,71 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare",
+      "@type": "Class",
+      "requireElement": "TaskPrepare",
+      "comment": "Runs the preparation phase of an experiment.",
+      "parameters": [
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_context",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_forceOverwriteGenerated",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_combination",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare__member_context",
+          "memberFieldName": "context"
+        },
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare__member_forceOverwriteGenerated",
+          "memberFieldName": "forceOverwriteGenerated"
+        },
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare__member_combination",
+          "memberFieldName": "combination"
+        },
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare__member_prepare",
+          "memberFieldName": "prepare"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_context"
+        },
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_forceOverwriteGenerated"
+        },
+        {
+          "@id": "j:components/task/TaskPrepare.jsonld#TaskPrepare_combination"
+        }
+      ]
+    }
+  ]
+}

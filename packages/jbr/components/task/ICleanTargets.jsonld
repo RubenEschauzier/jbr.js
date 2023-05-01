@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/ICleanTargets.jsonld#ICleanTargets",
+      "@type": "AbstractClass",
+      "requireElement": "ICleanTargets",
+      "comment": "Indicates what needs to be cleaned.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/task/ICleanTargets.jsonld#ICleanTargets__member_docker",
+          "memberFieldName": "docker"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

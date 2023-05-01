@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^5.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "jhsel": "npmd:@jbr-hook/sparql-endpoint-ldf/^2.0.0/",
+      "HookHandlerSparqlEndpointLdf": {
+        "@id": "jhsel:components/HookHandlerSparqlEndpointLdf.jsonld#HookHandlerSparqlEndpointLdf",
+        "@prefix": true,
+        "@context": {}
+      },
+      "HookSparqlEndpointLdf": {
+        "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf",
+        "@prefix": true,
+        "@context": {
+          "dockerfile": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dockerfile"
+          },
+          "dockerfileCache": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dockerfileCache"
+          },
+          "config": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_config"
+          },
+          "portServer": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_portServer"
+          },
+          "portCache": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_portCache"
+          },
+          "workers": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_workers"
+          },
+          "maxMemory": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_maxMemory"
+          },
+          "dataset": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dataset"
+          },
+          "resourceConstraints": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_resourceConstraints"
+          },
+          "hookSparqlEndpointLdfEngine": {
+            "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_hookSparqlEndpointLdfEngine"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;AAAA,qEAAmD;AACnD,8DAA4C","sourcesContent":["export * from './lib/HookHandlerSparqlEndpointLdf';\nexport * from './lib/HookSparqlEndpointLdf';\n"]}

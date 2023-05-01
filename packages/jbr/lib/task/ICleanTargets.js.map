@@ -1,0 +1,1 @@
+{"version":3,"file":"ICleanTargets.js","sourceRoot":"","sources":["ICleanTargets.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * Indicates what needs to be cleaned.\n */\nexport interface ICleanTargets {\n  docker?: boolean;\n}\n"]}

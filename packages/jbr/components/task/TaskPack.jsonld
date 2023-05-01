@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/TaskPack.jsonld#TaskPack",
+      "@type": "Class",
+      "requireElement": "TaskPack",
+      "comment": "Archives an experiment.",
+      "parameters": [
+        {
+          "@id": "j:components/task/TaskPack.jsonld#TaskPack_context",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskPack.jsonld#TaskPack_outputName",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskPack.jsonld#TaskPack__member_context",
+          "memberFieldName": "context"
+        },
+        {
+          "@id": "j:components/task/TaskPack.jsonld#TaskPack__member_outputName",
+          "memberFieldName": "outputName"
+        },
+        {
+          "@id": "j:components/task/TaskPack.jsonld#TaskPack__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/task/TaskPack.jsonld#TaskPack__member_pack",
+          "memberFieldName": "pack"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/task/TaskPack.jsonld#TaskPack_context"
+        },
+        {
+          "@id": "j:components/task/TaskPack.jsonld#TaskPack_outputName"
+        }
+      ]
+    }
+  ]
+}

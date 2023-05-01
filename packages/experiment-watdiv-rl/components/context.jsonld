@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^5.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "jewr": "npmd:@jbr-experiment/watdiv-rl/^2.0.0/",
+      "ExperimentHandlerWatDiv": {
+        "@id": "jewr:components/ExperimentHandlerWatDiv.jsonld#ExperimentHandlerWatDiv",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ExperimentWatDiv": {
+        "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv",
+        "@prefix": true,
+        "@context": {
+          "datasetScale": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_datasetScale"
+          },
+          "queryCount": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryCount"
+          },
+          "queryRecurrence": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRecurrence"
+          },
+          "generateHdt": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_generateHdt"
+          },
+          "endpointUrl": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_endpointUrl"
+          },
+          "queryRunnerReplication": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerReplication"
+          },
+          "queryRunnerWarmupRounds": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerWarmupRounds"
+          },
+          "queryRunnerRecordTimestamps": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerRecordTimestamps"
+          },
+          "queryRunnerRecordHttpRequests": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerRecordHttpRequests"
+          },
+          "queryRunnerUrlParamsInit": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerUrlParamsInit",
+            "@type": "@json"
+          },
+          "queryRunnerUrlParamsRun": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerUrlParamsRun",
+            "@type": "@json"
+          },
+          "hookSparqlEndpoint": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_hookSparqlEndpoint"
+          },
+          "queryTimeoutFallback": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryTimeoutFallback"
+          },
+          "n": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerReplication"
+          },
+          "ds": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerWarmupRounds"
+          },
+          "stamps": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerRecordTimestamps"
+          },
+          "Requests": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerRecordHttpRequests"
+          },
+          "nit": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerUrlParamsInit",
+            "@type": "@json"
+          },
+          "un": {
+            "@id": "jewr:components/ExperimentWatDiv.jsonld#ExperimentWatDiv_queryRunnerUrlParamsRun",
+            "@type": "@json"
+          }
+        }
+      }
+    }
+  ]
+}

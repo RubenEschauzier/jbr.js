@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler",
+      "@type": "AbstractClass",
+      "requireElement": "ExperimentHandler",
+      "comment": "Handler for a certain type of experiment.",
+      "genericTypeParameters": [
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler__generic_E",
+          "range": "j:components/experiment/Experiment.jsonld#Experiment"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler_id",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler_experimentClassName",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler__member_id",
+          "memberFieldName": "id",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler__member_experimentClassName",
+          "memberFieldName": "experimentClassName",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler__member_getDefaultParams",
+          "memberFieldName": "getDefaultParams"
+        },
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler__member_getHookNames",
+          "memberFieldName": "getHookNames"
+        },
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler__member_init",
+          "memberFieldName": "init"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler_id"
+        },
+        {
+          "@id": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler_experimentClassName"
+        }
+      ]
+    }
+  ]
+}

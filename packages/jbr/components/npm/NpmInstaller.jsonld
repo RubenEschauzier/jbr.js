@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/npm/NpmInstaller.jsonld#NpmInstaller",
+      "@type": "AbstractClass",
+      "requireElement": "NpmInstaller",
+      "comment": "Installs npm packages.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/npm/NpmInstaller.jsonld#NpmInstaller__member_install",
+          "memberFieldName": "install"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/hook/HookNonConfigured.jsonld#HookNonConfigured",
+      "@type": "Class",
+      "requireElement": "HookNonConfigured",
+      "extends": [
+        "j:components/hook/Hook.jsonld#Hook"
+      ],
+      "comment": "A hook that always errors upon usage.  This hook should be used by default for hooks in new experiments, which have not been configured yet.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/hook/HookNonConfigured.jsonld#HookNonConfigured__member_prepare",
+          "memberFieldName": "prepare"
+        },
+        {
+          "@id": "j:components/hook/HookNonConfigured.jsonld#HookNonConfigured__member_start",
+          "memberFieldName": "start"
+        },
+        {
+          "@id": "j:components/hook/HookNonConfigured.jsonld#HookNonConfigured__member_clean",
+          "memberFieldName": "clean"
+        },
+        {
+          "@id": "j:components/hook/HookNonConfigured.jsonld#HookNonConfigured__member_makeError",
+          "memberFieldName": "makeError"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"jbr.js","sourceRoot":"","sources":["jbr.ts"],"names":[],"mappings":";;;AACA,oDAA8C;AAC9C,IAAA,kBAAM,EAAC,OAAO,CAAC,GAAG,EAAE,EAAE,OAAO,CAAC,IAAI,CAAC,CAAC","sourcesContent":["#!/usr/bin/env node --max_old_space_size=8192\nimport { runCli } from '../lib/cli/CliRunner';\nrunCli(process.cwd(), process.argv);\n"]}

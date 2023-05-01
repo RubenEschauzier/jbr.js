@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize",
+      "@type": "Class",
+      "requireElement": "TaskInitialize",
+      "comment": "Initializes an experiment of the given type.",
+      "parameters": [
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_context",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_experimentTypeId",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_experimentName",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_targetDirectory",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_forceReInit",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_combinations",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_npmInstaller",
+          "range": "j:components/npm/NpmInstaller.jsonld#NpmInstaller"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_INIT_DIRS",
+          "memberFieldName": "INIT_DIRS",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_context",
+          "memberFieldName": "context"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_experimentTypeId",
+          "memberFieldName": "experimentTypeId"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_experimentName",
+          "memberFieldName": "experimentName"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_targetDirectory",
+          "memberFieldName": "targetDirectory"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_forceReInit",
+          "memberFieldName": "forceReInit"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_combinations",
+          "memberFieldName": "combinations"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_npmInstaller",
+          "memberFieldName": "npmInstaller"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize__member_init",
+          "memberFieldName": "init"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_context"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_experimentTypeId"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_experimentName"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_targetDirectory"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_forceReInit"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_combinations"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#TaskInitialize_npmInstaller"
+        }
+      ]
+    },
+    {
+      "@id": "j:components/task/TaskInitialize.jsonld#ITaskInitializeOutput",
+      "@type": "AbstractClass",
+      "requireElement": "ITaskInitializeOutput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#ITaskInitializeOutput__member_experimentDirectory",
+          "memberFieldName": "experimentDirectory"
+        },
+        {
+          "@id": "j:components/task/TaskInitialize.jsonld#ITaskInitializeOutput__member_hookNames",
+          "memberFieldName": "hookNames"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

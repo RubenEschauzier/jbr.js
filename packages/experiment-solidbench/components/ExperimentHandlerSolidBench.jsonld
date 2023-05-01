@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-experiment/solidbench",
+  "components": [
+    {
+      "@id": "jes:components/ExperimentHandlerSolidBench.jsonld#ExperimentHandlerSolidBench",
+      "@type": "Class",
+      "requireElement": "ExperimentHandlerSolidBench",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "j:components/experiment/ExperimentHandler.jsonld#ExperimentHandler",
+          "genericTypeInstances": [
+            "jes:components/ExperimentSolidBench.jsonld#ExperimentSolidBench"
+          ]
+        }
+      ],
+      "comment": "An experiment handler for the SolidBench social network benchmark.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "jes:components/ExperimentHandlerSolidBench.jsonld#ExperimentHandlerSolidBench__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "jes:components/ExperimentHandlerSolidBench.jsonld#ExperimentHandlerSolidBench__member_getDefaultParams",
+          "memberFieldName": "getDefaultParams"
+        },
+        {
+          "@id": "jes:components/ExperimentHandlerSolidBench.jsonld#ExperimentHandlerSolidBench__member_getHookNames",
+          "memberFieldName": "getHookNames"
+        },
+        {
+          "@id": "jes:components/ExperimentHandlerSolidBench.jsonld#ExperimentHandlerSolidBench__member_init",
+          "memberFieldName": "init"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

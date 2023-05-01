@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-ldf/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-hook/sparql-endpoint-ldf",
+  "components": [
+    {
+      "@id": "jhsel:components/HookHandlerSparqlEndpointLdf.jsonld#HookHandlerSparqlEndpointLdf",
+      "@type": "Class",
+      "requireElement": "HookHandlerSparqlEndpointLdf",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "j:components/hook/HookHandler.jsonld#HookHandler",
+          "genericTypeInstances": [
+            "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf"
+          ]
+        }
+      ],
+      "comment": "Hook handler for a LDF server-based SPARQL endpoint.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "jhsel:components/HookHandlerSparqlEndpointLdf.jsonld#HookHandlerSparqlEndpointLdf__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "jhsel:components/HookHandlerSparqlEndpointLdf.jsonld#HookHandlerSparqlEndpointLdf__member_getDefaultParams",
+          "memberFieldName": "getDefaultParams"
+        },
+        {
+          "@id": "jhsel:components/HookHandlerSparqlEndpointLdf.jsonld#HookHandlerSparqlEndpointLdf__member_getSubHookNames",
+          "memberFieldName": "getSubHookNames"
+        },
+        {
+          "@id": "jhsel:components/HookHandlerSparqlEndpointLdf.jsonld#HookHandlerSparqlEndpointLdf__member_init",
+          "memberFieldName": "init"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

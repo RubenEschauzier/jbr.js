@@ -1,0 +1,59 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller",
+      "@type": "Class",
+      "requireElement": "CliNpmInstaller",
+      "extends": [
+        "j:components/npm/NpmInstaller.jsonld#NpmInstaller"
+      ],
+      "comment": "Installs npm packages by invoking the CLI.",
+      "parameters": [
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller_context",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller_nextVersion",
+          "range": "xsd:boolean"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller__member_context",
+          "memberFieldName": "context"
+        },
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller__member_nextVersion",
+          "memberFieldName": "nextVersion"
+        },
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller__member_install",
+          "memberFieldName": "install"
+        },
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller__member_fetchPackageNames",
+          "memberFieldName": "fetchPackageNames"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller_context"
+        },
+        {
+          "@id": "j:components/npm/CliNpmInstaller.jsonld#CliNpmInstaller_nextVersion"
+        }
+      ]
+    }
+  ]
+}

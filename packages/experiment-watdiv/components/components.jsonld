@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/watdiv/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-experiment/watdiv",
+  "@type": "Module",
+  "requireName": "@jbr-experiment/watdiv",
+  "import": [
+    "jew:components/ExperimentHandlerWatDiv.jsonld",
+    "jew:components/ExperimentWatDiv.jsonld"
+  ]
+}

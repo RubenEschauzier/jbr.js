@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/experiment/ProcessHandler.jsonld#ProcessHandler",
+      "@type": "AbstractClass",
+      "requireElement": "ProcessHandler",
+      "comment": "Handles a started process.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/experiment/ProcessHandler.jsonld#ProcessHandler__member_close",
+          "memberFieldName": "close"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandler.jsonld#ProcessHandler__member_join",
+          "memberFieldName": "join"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandler.jsonld#ProcessHandler__member_startCollectingStats",
+          "memberFieldName": "startCollectingStats"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandler.jsonld#ProcessHandler__member_addTerminationHandler",
+          "memberFieldName": "addTerminationHandler"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandler.jsonld#ProcessHandler__member_removeTerminationHandler",
+          "memberFieldName": "removeTerminationHandler"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

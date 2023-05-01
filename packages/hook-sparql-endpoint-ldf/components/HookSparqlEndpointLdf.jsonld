@@ -1,0 +1,164 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-ldf/^2.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@jbr-hook/sparql-endpoint-ldf",
+  "components": [
+    {
+      "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf",
+      "@type": "Class",
+      "requireElement": "HookSparqlEndpointLdf",
+      "extends": [
+        "j:components/hook/Hook.jsonld#Hook"
+      ],
+      "comment": "A hook instance for a LDF server-based SPARQL endpoint.",
+      "parameters": [
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dockerfile",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dockerfileCache",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_config",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_portServer",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_portCache",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_workers",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_maxMemory",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dataset",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_resourceConstraints",
+          "range": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_hookSparqlEndpointLdfEngine",
+          "range": "j:components/hook/Hook.jsonld#Hook"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_dockerfile",
+          "memberFieldName": "dockerfile",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_dockerfileCache",
+          "memberFieldName": "dockerfileCache",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_resourceConstraints",
+          "memberFieldName": "resourceConstraints",
+          "range": "j:components/docker/DockerResourceConstraints.jsonld#DockerResourceConstraints"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_config",
+          "memberFieldName": "config",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_portServer",
+          "memberFieldName": "portServer",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_portCache",
+          "memberFieldName": "portCache",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_workers",
+          "memberFieldName": "workers",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_maxMemory",
+          "memberFieldName": "maxMemory",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_dataset",
+          "memberFieldName": "dataset",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_hookSparqlEndpointLdfEngine",
+          "memberFieldName": "hookSparqlEndpointLdfEngine",
+          "range": "j:components/hook/Hook.jsonld#Hook"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_getDockerImageName",
+          "memberFieldName": "getDockerImageName"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_prepare",
+          "memberFieldName": "prepare"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_start",
+          "memberFieldName": "start"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf__member_clean",
+          "memberFieldName": "clean"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dockerfile"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dockerfileCache"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_resourceConstraints"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_config"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_portServer"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_portCache"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_workers"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_maxMemory"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_dataset"
+        },
+        {
+          "@id": "jhsel:components/HookSparqlEndpointLdf.jsonld#HookSparqlEndpointLdf_hookSparqlEndpointLdfEngine"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite",
+      "@type": "Class",
+      "requireElement": "ProcessHandlerComposite",
+      "extends": [
+        "j:components/experiment/ProcessHandler.jsonld#ProcessHandler"
+      ],
+      "comment": "A process handler that combines an array of process handlers.",
+      "parameters": [
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite_processHandlers",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "j:components/experiment/ProcessHandler.jsonld#ProcessHandler"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite__member_processHandlers",
+          "memberFieldName": "processHandlers"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite__member_close",
+          "memberFieldName": "close"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite__member_join",
+          "memberFieldName": "join"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite__member_startCollectingStats",
+          "memberFieldName": "startCollectingStats"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite__member_addTerminationHandler",
+          "memberFieldName": "addTerminationHandler"
+        },
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite__member_removeTerminationHandler",
+          "memberFieldName": "removeTerminationHandler"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/experiment/ProcessHandlerComposite.jsonld#ProcessHandlerComposite_processHandlers"
+        }
+      ]
+    }
+  ]
+}

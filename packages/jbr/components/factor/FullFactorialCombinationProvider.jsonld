@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider",
+      "@type": "Class",
+      "requireElement": "FullFactorialCombinationProvider",
+      "extends": [
+        "j:components/factor/CombinationProvider.jsonld#CombinationProvider"
+      ],
+      "comment": "For all the given factor values, provide all possible combinations.",
+      "parameters": [
+        {
+          "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider_factors",
+          "range": "rdf:JSON",
+          "comment": "A hash of factor keys to an array of factor values."
+        },
+        {
+          "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider_commonGenerated",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "If the prepare phase is identical across combinations."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider__member_factors",
+          "memberFieldName": "factors"
+        },
+        {
+          "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider__member_commonGenerated",
+          "memberFieldName": "commonGenerated",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider__member_getFactorCombinations",
+          "memberFieldName": "getFactorCombinations"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider_factors"
+        },
+        {
+          "@id": "j:components/factor/FullFactorialCombinationProvider.jsonld#FullFactorialCombinationProvider_commonGenerated"
+        }
+      ]
+    }
+  ]
+}

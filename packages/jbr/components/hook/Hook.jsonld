@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "components": [
+    {
+      "@id": "j:components/hook/Hook.jsonld#Hook",
+      "@type": "AbstractClass",
+      "requireElement": "Hook",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/hook/Hook.jsonld#Hook__member_prepare",
+          "memberFieldName": "prepare"
+        },
+        {
+          "@id": "j:components/hook/Hook.jsonld#Hook__member_start",
+          "memberFieldName": "start"
+        },
+        {
+          "@id": "j:components/hook/Hook.jsonld#Hook__member_clean",
+          "memberFieldName": "clean"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "j:components/hook/Hook.jsonld#IHookStartOptions",
+      "@type": "AbstractClass",
+      "requireElement": "IHookStartOptions",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "j:components/hook/Hook.jsonld#IHookStartOptions__member_docker",
+          "memberFieldName": "docker"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:jbr",
+  "@type": "Module",
+  "requireName": "jbr",
+  "import": [
+    "j:components/cli/ErrorHandled.jsonld",
+    "j:components/docker/DockerContainerCreator.jsonld",
+    "j:components/docker/DockerImageBuilder.jsonld",
+    "j:components/docker/DockerImagePuller.jsonld",
+    "j:components/docker/DockerResourceConstraints.jsonld",
+    "j:components/docker/StaticDockerResourceConstraints.jsonld",
+    "j:components/experiment/ExperimentHandler.jsonld",
+    "j:components/experiment/Experiment.jsonld",
+    "j:components/experiment/ProcessHandler.jsonld",
+    "j:components/experiment/ProcessHandlerComposite.jsonld",
+    "j:components/factor/CombinationProvider.jsonld",
+    "j:components/factor/FractionalCombinationProvider.jsonld",
+    "j:components/factor/FullFactorialCombinationProvider.jsonld",
+    "j:components/hook/HookNonConfigured.jsonld",
+    "j:components/hook/Hook.jsonld",
+    "j:components/hook/HookHandler.jsonld",
+    "j:components/npm/CliNpmInstaller.jsonld",
+    "j:components/npm/NpmInstaller.jsonld",
+    "j:components/npm/VoidNpmInstaller.jsonld",
+    "j:components/task/ICleanTargets.jsonld",
+    "j:components/task/ITaskContext.jsonld",
+    "j:components/task/TaskClean.jsonld",
+    "j:components/task/TaskGenerateCombinations.jsonld",
+    "j:components/task/TaskInitialize.jsonld",
+    "j:components/task/TaskPack.jsonld",
+    "j:components/task/TaskPrepare.jsonld",
+    "j:components/task/TaskRun.jsonld",
+    "j:components/task/TaskSetHook.jsonld",
+    "j:components/task/TaskValidate.jsonld"
+  ]
+}
