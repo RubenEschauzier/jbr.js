@@ -8,7 +8,7 @@ output/
 .eslintcache
 documentation
 exp-*
-training-progress/
+**/training-progress/
 
 **/lib/**/*.js
 **/lib/**/*.js.map
