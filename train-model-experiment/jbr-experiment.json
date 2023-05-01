@@ -29,8 +29,8 @@
     "contextClient": "input/context-client.json",
     "additionalBinds": ["/generated/dataset.nt:/tmp/dataset.nt", "/training-progress/current/:/tmp/trainingStateEngine/"],
     "clientPort": 3001,
-    "clientLogLevel": "info",
-    "queryTimeout": 300,
-    "maxMemory": 8192
+    "clientLogLevel": "warn",
+    "queryTimeout": 60,
+    "maxMemory": 16000
   }
 }
