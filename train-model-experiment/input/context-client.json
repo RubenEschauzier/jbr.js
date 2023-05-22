@@ -1,4 +1,7 @@
 {
   "sources": [ "/tmp/dataset.nt" ],
-  "trainEndPoint": true
+  "trainEndPoint": true,
+  "learningRate": 0.0001,
+  "startTemperature": 20,
+  "modelConfigLocation": ""
 }
