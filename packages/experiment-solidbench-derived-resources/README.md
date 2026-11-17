@@ -164,6 +164,40 @@ cpu_percentage,memory,memory_percentage,received,transmitted
 
 `output/logs/server.txt`: Logs of the [Solid Community Server](https://github.com/solid/community-server/).
 
+### Per-query resource usage
+
+Next to the whole-run `stats-*.csv` files above, this experiment measures the resource usage of the
+server container (`server*` columns) and the SPARQL endpoint container (`endpoint*` columns, only if the hook runs in Docker)
+during every individual (non-warmup) query execution.
+Counters are read directly from the containers' cgroup v2 files on the host,
+with a fallback to the (slower) Docker API if those can not be read, e.g. for a remote Docker daemon.
+
+`output/query-resources-raw.csv` contains one row per execution, with the following columns per container:
+
+| Column | Unit | Meaning |
+| --- | --- | --- |
+| `<c>CpuAvg` | cores | Exact average CPU usage (CPU time / wall time). 1 means one fully used core. |
+| `<c>CpuMin`, `<c>CpuMax` | cores | Min/max CPU usage over the sampling intervals. Intervals shorter than half the sampling interval are ignored; if there are no other intervals, these equal `<c>CpuAvg`. |
+| `<c>CpuTime` | ms | Exact CPU time consumed. |
+| `<c>MemoryAvg`, `<c>MemoryMin`, `<c>MemoryMax` | bytes | Sampled anonymous memory (excluding page cache). The average is time-weighted. |
+| `<c>MemoryTotalMax` | bytes | Maximum sampled memory including page cache (comparable to `docker stats`). |
+| `<c>IoReadBytes`, `<c>IoWriteBytes` | bytes | Exact block device I/O. |
+| `<c>NetworkRxBytes`, `<c>NetworkTxBytes` | bytes | Exact network traffic, excluding loopback. |
+| `<c>Samples` | | Number of snapshots the sampled values are based on, including start and end. |
+
+Furthermore, each row contains `executionStartTime` and `executionEndTime` (Unix epoch, ms),
+and if idle waiting is enabled, `idleWaitTime` (ms) and `idleWaitTimedOut`.
+
+The same metrics are aggregated across replications in `output/query-times.csv`, over successful executions only:
+`*Min` columns take the minimum, `*Max` columns the maximum, and all other columns the mean (with a `*Std` column).
+`idleWaitTimedOutCount` counts the executions for which idle waiting timed out.
+
+Sampled values (`CpuMin`, `CpuMax`, `Memory*`) are only meaningful for queries that last several sampling intervals.
+All other values are exact for any query duration.
+
+Before every measured execution, the runner waits until the server is idle (CPU, block I/O and network below thresholds
+for a number of consecutive windows), so that leftover work of the previous execution does not leak into the next measurement.
+
 ## Configuration
 
 The default generated configuration file (`jbr-experiment.json`) for this experiment looks as follows:
@@ -230,6 +264,14 @@ More background information on these config options can be found in the README o
 * `queryRunnerRequestDelay`: Delay between requests in milliseconds.
 * `queryRunnerUrlParams`: A JSON record of string mappings containing URL parameters that will be passed to the SPARQL endpoint.
 * `queryTimeoutFallback`: An optional timeout value for a single query in milliseconds, to be used as fallback in case the SPARQL endpoint hook's timeout fails. This should always be higher than the timeout value configured in the SPARQL endpoint hook.
+* `queryResourceSamplingInterval`: _(optional, default `100`)_ Interval in milliseconds at which container resource usage is sampled during each query execution. Set to `0` to disable per-query resource tracking and idle waiting.
+* `queryResourceIdleCpuThreshold`: _(optional, default `0.05`)_ Maximum CPU usage (in cores) of the server for it to count as idle.
+* `queryResourceIdleIoThreshold`: _(optional, default `100000`)_ Maximum block I/O (bytes per second) of the server for it to count as idle.
+* `queryResourceIdleNetworkThreshold`: _(optional, default `10000`)_ Maximum network traffic (bytes per second) of the server for it to count as idle.
+* `queryResourceIdleWindow`: _(optional, default `250`)_ Length in milliseconds of a single idle check window.
+* `queryResourceIdleWindows`: _(optional, default `2`)_ Number of consecutive idle windows required before a query execution. Set to `0` to disable idle waiting.
+* `queryResourceIdleTimeout`: _(optional, default `30000`)_ Maximum time in milliseconds to wait for idleness, after which the query is executed anyway and a warning is logged.
+* `queryResourceIdleIncludeEndpoint`: _(optional, default `false`)_ If the SPARQL endpoint container must also be idle before a query execution.
 
 ## License
 

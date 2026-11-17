@@ -12,6 +12,13 @@
     "DockerImagePuller",
     "ITaskContext",
     "ChildProcess",
-    "Set"
+    "Set",
+    "CgroupResourceReader",
+    "DockerApiResourceReader",
+    "ExecutionResourceTracker",
+    "ResourceMeasurement",
+    "ResourceIdleWaiter",
+    "ResultAggregatorResourceTracking",
+    "SparqlBenchmarkRunnerResourceTracking"
   ]
 }

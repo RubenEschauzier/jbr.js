@@ -80,6 +80,7 @@
   ],
   "resolutions": {
     "@rdfjs/types": "2.0.1",
-    "cross-fetch": "4.1.0"
+    "cross-fetch": "4.1.0",
+    "solidbench": "npm:@rubeneschauzier/solidbench@^2.4.1"
   }
 }

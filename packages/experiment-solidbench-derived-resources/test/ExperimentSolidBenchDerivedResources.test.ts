@@ -3,7 +3,16 @@ import v8 from 'node:v8';
 import type { Hook, ITaskContext, DockerContainerHandler, DockerResourceConstraints, ProcessHandler } from 'jbr';
 import { StaticDockerResourceConstraints, createExperimentPaths } from 'jbr';
 import { TestLogger } from 'jbr/test/TestLogger';
+import { SparqlBenchmarkRunner } from 'sparql-benchmark-runner';
+import { createContainerResourceReader } from '../lib/ContainerResourceReader';
+import { ExecutionResourceTracker } from '../lib/ExecutionResourceTracker';
 import { ExperimentSolidBenchDerivedResources } from '../lib/ExperimentSolidBenchDerivedResources';
+import { ResourceIdleWaiter } from '../lib/ResourceIdleWaiter';
+import { ResultAggregatorResourceTracking } from '../lib/ResultAggregatorResourceTracking';
+
+jest.mock<any>('../lib/ContainerResourceReader', () => ({
+  createContainerResourceReader: jest.fn(async(container: any) => ({ read: jest.fn(), container })),
+}));
 
 let generatorGenerate: any;
 jest.mock<any>('solidbench/lib/Generator', () => ({
@@ -18,6 +27,7 @@ let resultSerializerSerialize: any;
 let resultSerializerRawSerialize: any;
 
 jest.mock<any>('sparql-benchmark-runner', () => ({
+  ResultAggregatorComunica: jest.requireActual('sparql-benchmark-runner').ResultAggregatorComunica,
   SparqlBenchmarkRunner: jest.fn().mockImplementation((options: any) => {
     options.logger('Test logger');
     return {
@@ -197,6 +207,8 @@ describe('ExperimentSolidBenchDerivedResources', () => {
     dirsOut = {};
     filesOut = {};
     otherEntries = [];
+    jest.mocked(SparqlBenchmarkRunner).mockClear();
+    jest.mocked(createContainerResourceReader).mockClear();
     jest.spyOn(<any> process, 'on').mockImplementation();
     jest.spyOn(v8, 'getHeapStatistics').mockImplementation(() => (<any>{ heap_size_limit: 8192 * 1024 * 1024 }));
   });
@@ -460,6 +472,189 @@ This can be configured using Node's --max_old_space_size option.`);
       expect(dirsOut).toEqual({
         'CWD/output': true,
         'CWD/output/logs': true,
+      });
+    });
+  });
+
+  describe('constructor', () => {
+    it('should use default resource tracking options', () => {
+      expect(experiment.queryResourceSamplingInterval).toBe(100);
+      expect(experiment.queryResourceIdleCpuThreshold).toBe(0.05);
+      expect(experiment.queryResourceIdleIoThreshold).toBe(100_000);
+      expect(experiment.queryResourceIdleNetworkThreshold).toBe(10_000);
+      expect(experiment.queryResourceIdleWindow).toBe(250);
+      expect(experiment.queryResourceIdleWindows).toBe(2);
+      expect(experiment.queryResourceIdleTimeout).toBe(30_000);
+      expect(experiment.queryResourceIdleIncludeEndpoint).toBe(false);
+    });
+
+    it('should accept custom resource tracking options', () => {
+      const custom = new ExperimentSolidBenchDerivedResources({
+        ...(<any> experiment),
+        queryResourceSamplingInterval: 50,
+        queryResourceIdleCpuThreshold: 0.1,
+        queryResourceIdleIoThreshold: 1,
+        queryResourceIdleNetworkThreshold: 2,
+        queryResourceIdleWindow: 100,
+        queryResourceIdleWindows: 3,
+        queryResourceIdleTimeout: 1_000,
+        queryResourceIdleIncludeEndpoint: true,
+      });
+      expect(custom.queryResourceSamplingInterval).toBe(50);
+      expect(custom.queryResourceIdleCpuThreshold).toBe(0.1);
+      expect(custom.queryResourceIdleIoThreshold).toBe(1);
+      expect(custom.queryResourceIdleNetworkThreshold).toBe(2);
+      expect(custom.queryResourceIdleWindow).toBe(100);
+      expect(custom.queryResourceIdleWindows).toBe(3);
+      expect(custom.queryResourceIdleTimeout).toBe(1_000);
+      expect(custom.queryResourceIdleIncludeEndpoint).toBe(true);
+    });
+  });
+
+  describe('projectResourceResults', () => {
+    it('should only keep resource-related fields', () => {
+      const error = new Error('E');
+      expect(experiment.projectResourceResults([
+        <any> { name: 'q', id: '0', time: 1, results: 2, hash: 'H', timestamps: [], serverCpuAvg: 1, other: 3 },
+        <any> { name: 'q', id: '1', time: 1, results: 0, hash: 'H', timestamps: [], error },
+      ], [ 'serverCpuAvg', 'serverCpuMax' ])).toEqual([
+        { name: 'q', id: '0', time: 1, results: 2, serverCpuAvg: 1 },
+        { name: 'q', id: '1', time: 1, results: 0, error },
+      ]);
+    });
+  });
+
+  describe('run with per-query resource tracking', () => {
+    const rawResults = [{ name: 'q', id: '0', time: 1, results: 1, hash: 'H', timestamps: [], serverCpuAvg: 1 }];
+
+    function runnerOptions(): any {
+      return jest.mocked(SparqlBenchmarkRunner).mock.calls[0][0];
+    }
+
+    beforeEach(() => {
+      experiment.httpAvailabilityLatch.sleepUntilAvailable = () => Promise.resolve();
+      (<any> serverHandler).container = { id: 'SERVER' };
+      (<any> endpointHandler).container = { id: 'ENDPOINT' };
+      sparqlBenchmarkRun = jest.fn(async({ onStart, onStop }) => {
+        await onStart();
+        await onStop();
+        return { aggregateResults: [], rawResults };
+      });
+    });
+
+    it('should track the server and endpoint, and wait for the server to be idle', async() => {
+      await experiment.run(context);
+
+      expect(createContainerResourceReader).toHaveBeenCalledTimes(2);
+      expect(createContainerResourceReader).toHaveBeenCalledWith({ id: 'SERVER' }, expect.any(Function));
+      expect(createContainerResourceReader).toHaveBeenCalledWith({ id: 'ENDPOINT' }, expect.any(Function));
+
+      const options = runnerOptions();
+      expect(options.resourceTracker).toBeInstanceOf(ExecutionResourceTracker);
+      expect(Object.keys(options.resourceTracker.readers)).toEqual([ 'server', 'endpoint' ]);
+      expect(options.resourceTracker.samplingInterval).toBe(100);
+      expect(options.idleWaiter).toBeInstanceOf(ResourceIdleWaiter);
+      expect(options.idleWaiter.readers.map((reader: any) => reader.container.id)).toEqual([ 'SERVER' ]);
+      expect(options.idleWaiter.options).toEqual({
+        cpuThreshold: 0.05,
+        ioThreshold: 100_000,
+        networkThreshold: 10_000,
+        window: 250,
+        windows: 2,
+        timeout: 30_000,
+      });
+      expect(options.resultAggregator).toBeInstanceOf(ResultAggregatorResourceTracking);
+      expect(options.resultAggregator.metricKeys).toContain('serverCpuAvg');
+      expect(options.resultAggregator.metricKeys).toContain('endpointMemoryMax');
+      expect(options.resultAggregator.metricKeys).toContain('idleWaitTime');
+
+      expect(resultSerializerSerialize).toHaveBeenCalledWith(Path.normalize('CWD/output/query-times.csv'), []);
+      expect(resultSerializerSerialize).toHaveBeenCalledWith(
+        Path.normalize('CWD/output/query-resources-raw.csv'),
+        [{ name: 'q', id: '0', time: 1, results: 1, serverCpuAvg: 1 }],
+      );
+      expect(resultSerializerRawSerialize).toHaveBeenCalledWith(
+        Path.normalize('CWD/output/query-results-raw.json'),
+        rawResults,
+      );
+      expect(context.logger.warn).not.toHaveBeenCalled();
+    });
+
+    it('should forward reader warnings to the logger', async() => {
+      await experiment.run(context);
+
+      const warn = jest.mocked(createContainerResourceReader).mock.calls[0][1];
+      warn('WARNING');
+      expect(context.logger.warn).toHaveBeenCalledWith('WARNING');
+    });
+
+    it('should include the endpoint in idle waiting if configured', async() => {
+      (<any> experiment).queryResourceIdleIncludeEndpoint = true;
+      await experiment.run(context);
+
+      expect(runnerOptions().idleWaiter.readers.map((reader: any) => reader.container.id))
+        .toEqual([ 'SERVER', 'ENDPOINT' ]);
+    });
+
+    it('should not wait for idleness if idle windows is 0', async() => {
+      (<any> experiment).queryResourceIdleWindows = 0;
+      await experiment.run(context);
+
+      expect(runnerOptions().resourceTracker).toBeInstanceOf(ExecutionResourceTracker);
+      expect(runnerOptions().idleWaiter).toBeUndefined();
+    });
+
+    it('should not track or wait if the sampling interval is 0', async() => {
+      (<any> experiment).queryResourceSamplingInterval = 0;
+      await experiment.run(context);
+
+      expect(createContainerResourceReader).not.toHaveBeenCalled();
+      expect(runnerOptions().resourceTracker).toBeUndefined();
+      expect(runnerOptions().idleWaiter).toBeUndefined();
+      expect(runnerOptions().resultAggregator.metricKeys).toEqual([]);
+      expect(resultSerializerSerialize).not.toHaveBeenCalledWith(
+        Path.normalize('CWD/output/query-resources-raw.csv'),
+        expect.anything(),
+      );
+      expect(context.logger.warn).not.toHaveBeenCalled();
+    });
+
+    it('should only track the server if the endpoint is not a Docker container', async() => {
+      delete (<any> endpointHandler).container;
+      await experiment.run(context);
+
+      expect(Object.keys(runnerOptions().resourceTracker.readers)).toEqual([ 'server' ]);
+      expect(context.logger.warn).toHaveBeenCalledWith(
+        'Per-query resource tracking is skipped for the endpoint, as it does not run in a Docker container',
+      );
+    });
+
+    it('should only track the endpoint if the server is not a Docker container', async() => {
+      delete (<any> serverHandler).container;
+      await experiment.run(context);
+
+      expect(Object.keys(runnerOptions().resourceTracker.readers)).toEqual([ 'endpoint' ]);
+      expect(runnerOptions().idleWaiter).toBeUndefined();
+    });
+
+    it('should not write resource results if the runner produces no raw results', async() => {
+      sparqlBenchmarkRun = jest.fn(async() => ({ aggregateResults: []}));
+      await experiment.run(context);
+
+      expect(resultSerializerSerialize).toHaveBeenCalledTimes(1);
+      expect(resultSerializerRawSerialize).not.toHaveBeenCalled();
+    });
+
+    it('should pass the standard runner options', async() => {
+      await experiment.run(context);
+
+      expect(runnerOptions()).toMatchObject({
+        endpoint: 'http://localhost:3001/sparql',
+        replication: 3,
+        warmup: 1,
+        requestDelay: 0,
+        availabilityCheckTimeout: 1_000,
+        timeout: 600,
       });
     });
   });

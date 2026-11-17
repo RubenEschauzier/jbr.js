@@ -4360,10 +4360,10 @@
     node-fetch "^2.7.0"
     ts-guards "^0.5.1"
 
-"@solid/community-server@^7.0.0":
-  version "7.1.9"
-  resolved "https://registry.yarnpkg.com/@solid/community-server/-/community-server-7.1.9.tgz#36d145c3bd5a0d61b7e74ffc73826de69d895223"
-  integrity sha512-q3DmqoOyhMw0AGOMBDZCFTd4TjOltqQ6WFPa++aEqzgAdzeKvX/WiD317Y/OlNHAc146ieRAxx1Vd0PHDbF3oQ==
+"@solid/community-server@^7.1.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@solid/community-server/-/community-server-7.2.0.tgz#754873cf89942eb442b831292cdc545edcdae214"
+  integrity sha512-rPC5NTMwao5AMG4iZoXazbkG9gUb7FGvLVVAYQXmjufUmFvu/pgCJR6VOXv5eg8iGuvH8CSnepa0JbMS6zpKGw==
   dependencies:
     "@comunica/context-entries" "^2.8.2"
     "@comunica/query-sparql" "^2.9.0"
@@ -4390,7 +4390,6 @@
     "@types/rdf-validate-shacl" "^0.4.4"
     "@types/sparqljs" "^3.1.6"
     "@types/url-join" "^4.0.1"
-    "@types/uuid" "^9.0.5"
     "@types/ws" "^8.5.7"
     "@types/yargs" "^17.0.28"
     arrayify-stream "^2.0.1"
@@ -4415,7 +4414,7 @@
     marked "^9.1.0"
     mime-types "^2.1.35"
     n3 "^1.17.1"
-    nodemailer "^7.0.7"
+    nodemailer "^9.0.1"
     oidc-provider "^8.4.0"
     proper-lockfile "^4.1.2"
     pump "^3.0.0"
@@ -4429,7 +4428,6 @@
     sparqlalgebrajs "^4.3.0"
     sparqljs "^3.7.1"
     url-join "^4.0.1"
-    uuid "^9.0.1"
     winston "^3.11.0"
     winston-transport "^4.5.0"
     ws "^8.14.2"
@@ -5122,7 +5120,7 @@
   resolved "https://registry.yarnpkg.com/@types/url-join/-/url-join-4.0.3.tgz#09ede6753b846a274301b9bd3a6ed117050daecd"
   integrity sha512-3l1qMm3wqO0iyC5gkADzT95UVW7C/XXcdvUcShOideKF0ddgVRErEQQJXBd2kvQm+aSgqhBGHGB38TgMeT57Ww==
 
-"@types/uuid@^9.0.0", "@types/uuid@^9.0.5":
+"@types/uuid@^9.0.0":
   version "9.0.8"
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-9.0.8.tgz#7545ba4fc3c003d6c756f651f3bf163d8f0f29ba"
   integrity sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==
@@ -10668,10 +10666,10 @@ node-releases@^2.0.53:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.53.tgz#0fe5ad8a7935e075172f574e56f0c20f07fa41af"
   integrity sha512-D9UOmYG3UH1V+ENW56t5QXBwJw1YEY18ruVeus89Rw+SyIgjPkCO84bRzO3uNIYosJbNwiabWVn48o3uJLjxFQ==
 
-nodemailer@^7.0.7:
-  version "7.0.13"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-7.0.13.tgz#74acaa55f0c6f9476384c29f27f53e467e8483cd"
-  integrity sha512-PNDFSJdP+KFgdsG3ZzMXCgquO7I6McjY2vlqILjtJd0hy8wEvtugS9xKRF2NWlPNGxvLCXlTNIae4serI7dinw==
+nodemailer@^9.0.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-9.1.1.tgz#fb991992723657f34dbe1d829139aa66be008e96"
+  integrity sha512-izw9mVKFix6YSnC9eLgV6g1opl9DUlRio9ZNcq+Wu9Ujn2UwF+8Nl0B8nz22kEC+CTZCvinkxwJ0DeFbb6NwcQ==
 
 nopt@^8.0.0:
   version "8.1.0"
@@ -11714,10 +11712,10 @@ rdf-data-factory@^2.0.0, rdf-data-factory@^2.0.1, rdf-data-factory@^2.0.2:
   dependencies:
     "@rdfjs/types" "^2.0.0"
 
-rdf-dataset-fragmenter@^2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/rdf-dataset-fragmenter/-/rdf-dataset-fragmenter-2.10.0.tgz#e2cc41aae738ac74c731eb50905bc10b903ecbb4"
-  integrity sha512-I0o4HsdTY8oUnp9IpHs7rQs33bEhhsbO4XAwvLtmQRKIfJurgP9HwCJKB8lUibQHmtBgdKaBhhs4Agti2gDY5g==
+"rdf-dataset-fragmenter@npm:@rubeneschauzier/rdf-dataset-fragmenter@^2.10.1":
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/@rubeneschauzier/rdf-dataset-fragmenter/-/rdf-dataset-fragmenter-2.10.1.tgz#055fcb2e0bc90da88f4dda6cdf36007167020e15"
+  integrity sha512-hq9oHaSxy2pJl/fR9x2mnwCLnyv5ibyotZC0e5QQt2d6qIUavfR0LcgfLKD6yzFkVIvseuj/BS1iU8pW/dsROg==
   dependencies:
     "@rdfjs/types" "*"
     "@types/async-lock" "^1.4.0"
@@ -11735,6 +11733,7 @@ rdf-dataset-fragmenter@^2.10.0:
     rdf-string "^1.6.0"
     rdf-terms "^1.11.0"
     relative-to-absolute-iri "^1.0.0"
+    sparqljs "^3.7.3"
     stream-to-string "^1.0.0"
 
 rdf-dereference@^2.2.0:
@@ -12671,18 +12670,18 @@ socks@^2.8.3:
     ip-address "^10.1.1"
     smart-buffer "^4.2.0"
 
-solidbench@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/solidbench/-/solidbench-2.2.1.tgz#e924d97942352fda4ebe039c8d7ae096f7a0fecf"
-  integrity sha512-Z4d8eTn1PIHy1ujQ3NBxBqjdfWShp05uLrTVIORk6V5GFFx0l85+2BsmTYVNqgtppsoj2gNJh7g2RnrwDZeA7g==
+solidbench@^2.2.1, "solidbench@npm:@rubeneschauzier/solidbench@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@rubeneschauzier/solidbench/-/solidbench-2.4.1.tgz#2d9074a2202f8e11153bb86cf285ab1995b6b22b"
+  integrity sha512-5vRQwE5g+PDk25sF7IXS97bBBW+ZELbTrrRyWULBFe0GJtlR3Lk78f3+VIY+2nEnHBoUvquZUv4esDIZ8lmwXw==
   dependencies:
-    "@solid/community-server" "^7.0.0"
+    "@solid/community-server" "^7.1.0"
     "@types/dockerode" "^3.0.0"
     "@types/unzipper" "^0.10.0"
     dockerode "^4.0.0"
     ldbc-snb-enhancer "^2.7.1"
     ldbc-snb-validation-generator "^1.2.0"
-    rdf-dataset-fragmenter "^2.10.0"
+    rdf-dataset-fragmenter "npm:@rubeneschauzier/rdf-dataset-fragmenter@^2.10.1"
     sparql-query-parameter-instantiator "^2.8.0"
     unzipper "^0.12.0"
     yargs "^17.0.0"
@@ -12781,7 +12780,7 @@ sparqlalgebrajs@^5.0.2:
     rdf-terms "^2.0.0"
     sparqljs "^3.7.1"
 
-sparqljs@^3.0.0, sparqljs@^3.1.2, sparqljs@^3.7.0, sparqljs@^3.7.1:
+sparqljs@^3.0.0, sparqljs@^3.1.2, sparqljs@^3.7.0, sparqljs@^3.7.1, sparqljs@^3.7.3:
   version "3.7.4"
   resolved "https://registry.yarnpkg.com/sparqljs/-/sparqljs-3.7.4.tgz#d1f0c525aab6030c521b12ccef7efa2f57c82e90"
   integrity sha512-hb4C84gf7KM7vz+iG595mPwvqxOvBJCm9L3dCxtV2zZDht6ZMmMG0tHeeqFeqwb9875yU9U4lhYe4LYRvWj0BQ==
@@ -13687,7 +13686,7 @@ uuid@^10.0.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-10.0.0.tgz#5a95aa454e6e002725c79055fd42aaba30ca6294"
   integrity sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==
 
-uuid@^9.0.0, uuid@^9.0.1:
+uuid@^9.0.0:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.1.tgz#e188d4c8853cc722220392c424cd637f32293f30"
   integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==
