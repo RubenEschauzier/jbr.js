@@ -1,6 +1,6 @@
 {
   "name": "@rubeneschauzier/solidbench-derived-resources",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "description": "SolidBench experiment handler for JBR that creates a derived-resource compatible configuration",
   "main": "index.js",
   "typings": "index",

@@ -19,6 +19,13 @@
     "ResourceMeasurement",
     "ResourceIdleWaiter",
     "ResultAggregatorResourceTracking",
-    "SparqlBenchmarkRunnerResourceTracking"
+    "SparqlBenchmarkRunnerResourceTracking",
+    "IDockerApiStats",
+    "IDockerContainerLike",
+    "IResourceReader",
+    "IResourceSnapshot",
+    "IResourceIdleWaiterOptions",
+    "IResourceIdleWaitResult",
+    "ISparqlBenchmarkRunnerResourceTrackingArgs"
   ]
 }
